@@ -2,7 +2,7 @@
   "extensions": [
     {
       "slug": "strings",
-      "id": "Strings",
+      "id": "strings",
       "name": "Strings",
       "description": "Utilitiy blocks for dealing with strings and sometimes booleans.",
       "image": "https://raw.githubusercontent.com/Momentum-Scratch/extensions/refs/heads/main/img/strings.svg",
