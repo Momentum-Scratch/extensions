@@ -1,7 +1,7 @@
 {
   "extensions": [
     {
-      "slug": "strings",
+      "slug": "Strings",
       "id": "strings",
       "name": "Strings",
       "description": "Utilitiy blocks for dealing with strings and sometimes booleans.",
