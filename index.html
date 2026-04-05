@@ -360,17 +360,36 @@ function toggleDark() {
 
 let allExtensions = [];
 
+// Build the full absolute URL for an extension file given its slug.
+// The slug from the JSON (e.g. "lab/text") maps to a .js file relative
+// to the current page's origin + path, then that full URL is passed as
+// the ?extension= query param to /scratch-gui.
+function extFileUrl(slug) {
+  // Extension JS files live next to the JSON, under the same base.
+  // Construct an absolute URL so /scratch-gui can receive it unambiguously.
+  const base = new URL(slug + '.js', window.location.href);
+  return base.href;
+}
+
 function buildCard(ext) {
   const authors = (ext.by || []).map(a => a.name).join(', ') || 'Unknown';
-  const editorUrl = 'Skyhigh173/bigint.js'; // relative base — slug appended
-  const href = ext.slug ? (editorUrl.replace(/\/$/, '') + '/' + ext.slug) : '#';
+
+  // Full absolute URL to the extension JS file
+  const fileUrl = extFileUrl(ext.slug || '');
+  // Editor URL: /scratch-gui?extension=<encoded absolute url>
+  const href = ext.slug
+    ? '/scratch-gui?extension=' + encodeURIComponent(fileUrl)
+    : '#';
 
   const imgHtml = ext.image
     ? `<img src="${ext.image}" alt="${esc(ext.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" /><div class="ext-img-placeholder" style="display:none"><svg data-feather="puzzle" style="width:22px;height:22px;stroke:white;stroke-width:1.75;fill:none"></svg></div>`
     : `<div class="ext-img-placeholder"><svg data-feather="puzzle" style="width:22px;height:22px;stroke:white;stroke-width:1.75;fill:none"></svg></div>`;
 
   return `
-    <a class="ext-card" href="${esc(href)}" target="_blank" rel="noopener" data-name="${esc(ext.name.toLowerCase())}" data-desc="${esc((ext.description || '').toLowerCase())}" data-slug="${esc((ext.slug || '').toLowerCase())}">
+    <a class="ext-card" href="${esc(href)}" target="_blank" rel="noopener"
+       data-name="${esc(ext.name.toLowerCase())}"
+       data-desc="${esc((ext.description || '').toLowerCase())}"
+       data-slug="${esc((ext.slug || '').toLowerCase())}">
       <div class="ext-img-wrap">${imgHtml}</div>
       <div class="ext-body">
         <div class="ext-name">${esc(ext.name)}</div>
@@ -409,8 +428,7 @@ function filterCards() {
     if (match) shown++;
   });
   updateCount(shown, allExtensions.length);
-  const emptyState = document.getElementById('empty-state');
-  emptyState.classList.toggle('hidden', shown > 0);
+  document.getElementById('empty-state').classList.toggle('hidden', shown > 0);
 }
 
 async function loadExtensions() {
