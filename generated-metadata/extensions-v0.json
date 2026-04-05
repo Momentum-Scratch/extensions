@@ -1,0 +1,19 @@
+{
+  "extensions": [
+    {
+      "slug": "strings",
+      "id": "Strings",
+      "name": "Strings",
+      "description": "Strings... Strings...",
+      "image": "",
+      "by": [
+        {
+          "name": "kokofixcomputers",
+          "link": "https://github.com/kokofixcomputers.png"
+        }
+      ],
+      "featured": true,
+      "filename": "strings"
+    }
+  ]
+}
