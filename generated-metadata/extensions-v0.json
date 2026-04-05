@@ -4,8 +4,8 @@
       "slug": "strings",
       "id": "Strings",
       "name": "Strings",
-      "description": "Strings... Strings...",
-      "image": "",
+      "description": "Utilitiy blocks for dealing with strings and sometimes booleans.",
+      "image": "https://raw.githubusercontent.com/Momentum-Scratch/extensions/refs/heads/main/img/strings.svg",
       "by": [
         {
           "name": "kokofixcomputers",
