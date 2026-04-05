@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="309.297" height="159.649" viewBox="0 0 309.297 159.649">
+  <defs>
+    <linearGradient x1="240" y1="105.176" x2="240" y2="254.824" gradientUnits="userSpaceOnUse" id="a">
+      <stop offset="0" stop-color="#1a0d3d"/>
+      <stop offset="1" stop-color="#3d1a7a"/>
+    </linearGradient>
+  </defs>
+  <g stroke-miterlimit="10">
+    <!-- Main background rounded rect -->
+    <path d="M4.656 139.024v-122.5c0-6.04 7.79-11.695 16.793-11.695h266.5c10.527 0 16.693 7.611 16.693 15.195v118.5c0 9.961-7.998 16.295-17.193 16.295h-263c-12.406 0-19.793-6.112-19.793-15.795" fill="#6b3fa0"/>
+    <!-- Diagonal triangle pattern - darker shade -->
+    <path d="m229.646 154.821 74.996-74.997v64.5c0 4.986-4.918 10.497-9.509 10.497zm-75.087-74.997L225.554 8.83c2.156-2.156 3.752 2.176 3.752 7.744 0 12.76.25 63.25.25 63.25zm37.588 74.997 37.499-37.499v37.499zm0-37.499 37.499-37.498v37.498zM79.652 154.821l74.997-74.997v74.997zm-70.384-4.613 70.384-70.384v74.997H13.383c-4.269 0-6.563-2.164-4.115-4.613" fill="#5a2e8a"/>
+    <path d="m154.559 154.821 37.5-37.499v37.499zm0-37.499 37.5-37.498v37.498zM267.144 79.83l37.498-37.498V79.83zm0-37.498 37.498-37.499v37.499zM229.556 79.83l37.499-37.498V79.83zm0-37.498 37.499-37.499v37.499zM117.262 79.824l37.499-37.498v37.498zm0-37.498 37.499-37.499v37.499zM79.675 79.824l37.498-37.498v37.498zm0-37.498 37.498-37.499v37.499z" fill="#5a2e8a"/>
+    <path d="m42.305 79.83 37.498-37.498V79.83zm0-37.498L79.803 4.833v37.499zM4.717 79.83l37.499-37.498V79.83zm0-37.498L42.216 4.833v37.499z" fill="#5a2e8a"/>
+    <!-- Border/stroke rectangle -->
+    <path d="M90.351 118.171c0-6.399 5.916-12.995 13.12-12.995h272.61c8.613 0 13.568 4.643 13.568 12.246v125.705c0 6.04-4.86 11.697-13.32 11.697H103.72c-7.328 0-13.369-4.523-13.369-11.947z" fill="none" stroke="url(#a)" stroke-width="10" transform="translate(-85.351 -100.176)"/>
+
+    <!-- String icon: quotation marks / string visual on the left -->
+    <!-- Large quote marks icon area -->
+    <g fill="#fff" stroke-opacity="0.502" stroke="#000" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+      <!-- Opening double quote mark -->
+      <path d="M42 55 Q38 45 44 38 Q50 31 58 33 Q52 40 54 48 Q56 57 48 60 Q40 63 38 57 Z"/>
+      <path d="M60 55 Q56 45 62 38 Q68 31 76 33 Q70 40 72 48 Q74 57 66 60 Q58 63 56 57 Z"/>
+      <!-- Closing double quote mark -->
+      <path d="M42 95 Q38 85 44 78 Q50 71 58 73 Q52 80 54 88 Q56 97 48 100 Q40 103 38 97 Z"/>
+      <path d="M60 95 Q56 85 62 78 Q68 71 76 73 Q70 80 72 88 Q74 97 66 100 Q58 103 56 97 Z"/>
+    </g>
+    <g fill="#fff" stroke-linejoin="round" stroke-linecap="round">
+      <!-- Opening double quote mark -->
+      <path d="M42 55 Q38 45 44 38 Q50 31 58 33 Q52 40 54 48 Q56 57 48 60 Q40 63 38 57 Z"/>
+      <path d="M60 55 Q56 45 62 38 Q68 31 76 33 Q70 40 72 48 Q74 57 66 60 Q58 63 56 57 Z"/>
+      <!-- Closing double quote mark -->
+      <path d="M42 95 Q38 85 44 78 Q50 71 58 73 Q52 80 54 88 Q56 97 48 100 Q40 103 38 97 Z"/>
+      <path d="M60 95 Q56 85 62 78 Q68 71 76 73 Q70 80 72 88 Q74 97 66 100 Q58 103 56 97 Z"/>
+    </g>
+
+    <!-- "contains" visual: highlighted substring pill on bottom left -->
+    <g>
+      <!-- "apple" text background pill -->
+      <rect x="10" y="112" width="72" height="22" rx="11" fill="#ffffff" opacity="0.15"/>
+      <!-- highlighted "app" inside pill -->
+      <rect x="10" y="112" width="36" height="22" rx="11" fill="#ffdd57" opacity="0.85"/>
+    </g>
+
+    <!-- STRINGS label text (right side, matching other extensions' white text style) -->
+    <!-- Shadow/stroke pass -->
+    <g fill="none" stroke-opacity="0.502" stroke="#000" stroke-width="6" stroke-linecap="square" stroke-linejoin="round">
+      <text x="100" y="72" font-family="sans-serif" font-weight="bold" font-size="36" letter-spacing="1">STRINGS</text>
+    </g>
+    <!-- White fill pass -->
+    <g fill="#fff" stroke="none">
+      <text x="100" y="72" font-family="sans-serif" font-weight="bold" font-size="36" letter-spacing="1">STRINGS</text>
+    </g>
+
+    <!-- Subtitle label -->
+    <g fill="none" stroke-opacity="0.4" stroke="#000" stroke-width="4" stroke-linecap="square" stroke-linejoin="round">
+      <text x="100" y="100" font-family="sans-serif" font-weight="bold" font-size="18" letter-spacing="0.5">String Utilities</text>
+    </g>
+    <g fill="#fff" stroke="none">
+      <text x="100" y="100" font-family="sans-serif" font-weight="bold" font-size="18" letter-spacing="0.5">String Utilities</text>
+    </g>
+  </g>
+</svg>
