@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="309.297" height="159.649" viewBox="0 0 309.297 159.649">
+  <defs>
+    <linearGradient x1="240" y1="105.176" x2="240" y2="254.824" gradientUnits="userSpaceOnUse" id="a">
+      <stop offset="0" stop-color="#0d2230"/>
+      <stop offset="1" stop-color="#173f56"/>
+    </linearGradient>
+  </defs>
+  <g stroke-miterlimit="10">
+    <path d="M4.656 139.024v-122.5c0-6.04 7.79-11.695 16.793-11.695h266.5c10.527 0 16.693 7.611 16.693 15.195v118.5c0 9.961-7.998 16.295-17.193 16.295h-263c-12.406 0-19.793-6.112-19.793-15.795" fill="#1f6b86"/>
+    <path d="m229.646 154.821 74.996-74.997v64.5c0 4.986-4.918 10.497-9.509 10.497zm-75.087-74.997L225.554 8.83c2.156-2.156 3.752 2.176 3.752 7.744 0 12.76.25 63.25.25 63.25zm37.588 74.997 37.499-37.499v37.499zm0-37.499 37.499-37.498v37.498zM79.652 154.821l74.997-74.997v74.997zm-70.384-4.613 70.384-70.384v74.997H13.383c-4.269 0-6.563-2.164-4.115-4.613" fill="#18556a"/>
+    <path d="m154.559 154.821 37.5-37.499v37.499zm0-37.499 37.5-37.498v37.498zM267.144 79.83l37.498-37.498V79.83zm0-37.498 37.498-37.499v37.499zM229.556 79.83l37.499-37.498V79.83zm0-37.498 37.499-37.499v37.499zM117.262 79.824l37.499-37.498v37.498zm0-37.498 37.499-37.499v37.499zM79.675 79.824l37.498-37.498v37.498zm0-37.498 37.498-37.499v37.499z" fill="#18556a"/>
+    <path d="m42.305 79.83 37.498-37.498V79.83zm0-37.498L79.803 4.833v37.499zM4.717 79.83l37.499-37.498V79.83zm0-37.498L42.216 4.833v37.499z" fill="#18556a"/>
+    <path d="M90.351 118.171c0-6.399 5.916-12.995 13.12-12.995h272.61c8.613 0 13.568 4.643 13.568 12.246v125.705c0 6.04-4.86 11.697-13.32 11.697H103.72c-7.328 0-13.369-4.523-13.369-11.947z" fill="none" stroke="url(#a)" stroke-width="10" transform="translate(-85.351 -100.176)"/>
+
+    <!-- Left icon: lock + binary/hash nodes -->
+    <g>
+      <path d="M33 47c0-11 8.2-19 19-19s19 8 19 19v11h4.5c4.1 0 7.5 3.4 7.5 7.5v35c0 4.1-3.4 7.5-7.5 7.5h-47c-4.1 0-7.5-3.4-7.5-7.5v-35c0-4.1 3.4-7.5 7.5-7.5H33zm10 0v11h18V47c0-5.6-3.7-9.5-9-9.5s-9 3.9-9 9.5z" fill="#fff" stroke="#000" stroke-opacity=".48" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M33 47c0-11 8.2-19 19-19s19 8 19 19v11h4.5c4.1 0 7.5 3.4 7.5 7.5v35c0 4.1-3.4 7.5-7.5 7.5h-47c-4.1 0-7.5-3.4-7.5-7.5v-35c0-4.1 3.4-7.5 7.5-7.5H33zm10 0v11h18V47c0-5.6-3.7-9.5-9-9.5s-9 3.9-9 9.5z" fill="#fff"/>
+
+      <circle cx="39" cy="74" r="5.8" fill="#1f6b86"/>
+      <circle cx="52" cy="74" r="5.8" fill="#1f6b86"/>
+      <circle cx="65" cy="74" r="5.8" fill="#1f6b86"/>
+      <rect x="46.5" y="84" width="11" height="14" rx="5.5" fill="#1f6b86"/>
+
+      <path d="M86 36l16 8-16 8m0 24 16 8-16 8" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M86 36l16 8-16 8m0 24 16 8-16 8" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Hash pill -->
+    <g>
+      <rect x="12" y="118" width="74" height="20" rx="10" fill="#ffffff" opacity="0.14"/>
+      <text x="24" y="132.5" font-family="monospace" font-size="12" fill="#d8f5ff">a94a8f...</text>
+    </g>
+
+    <!-- Title -->
+    <g fill="none" stroke-opacity="0.502" stroke="#000" stroke-width="6" stroke-linecap="square" stroke-linejoin="round">
+      <text x="110" y="70" font-family="sans-serif" font-weight="bold" font-size="35" letter-spacing="1">CRYPTIC</text>
+    </g>
+    <g fill="#fff">
+      <text x="110" y="70" font-family="sans-serif" font-weight="bold" font-size="35" letter-spacing="1">CRYPTIC</text>
+    </g>
+
+    <!-- Subtitle -->
+    <g fill="none" stroke-opacity="0.4" stroke="#000" stroke-width="4" stroke-linecap="square" stroke-linejoin="round">
+      <text x="110" y="98" font-family="sans-serif" font-weight="bold" font-size="15.5" letter-spacing="0.4">Encrypt · Decode · Hash</text>
+    </g>
+    <g fill="#fff">
+      <text x="110" y="98" font-family="sans-serif" font-weight="bold" font-size="15.5" letter-spacing="0.4">Encrypt · Decode · Hash</text>
+    </g>
+
+    <!-- Bottom capability line -->
+    <g fill="none" stroke-opacity="0.38" stroke="#000" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="round">
+      <text x="109" y="128" font-family="monospace" font-size="12.8">AES / Base64 / SHA / URL</text>
+    </g>
+    <g fill="#e8fbff">
+      <text x="109" y="128" font-family="monospace" font-size="12.8">AES / Base64 / SHA / URL</text>
+    </g>
+  </g>
+</svg>
