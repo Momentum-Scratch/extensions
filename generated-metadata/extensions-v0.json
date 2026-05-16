@@ -45,5 +45,20 @@
       "featured": true,
       "filename": "TOTPUtils"
     },
+    {
+      "slug": "JSON",
+      "id": "JSON",
+      "name": "JSON",
+      "description": "Some advanced JSON utils so advanced u will never use and also some basic ones",
+      "image": "strings.svg",
+      "by": [
+        {
+          "name": "kokofixcomputers",
+          "link": "https://github.com/kokofixcomputers.png"
+        }
+      ],
+      "featured": true,
+      "filename": "JSON"
+    },
   ]
 }
