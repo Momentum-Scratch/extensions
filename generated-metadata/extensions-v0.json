@@ -29,6 +29,21 @@
       ],
       "featured": true,
       "filename": "Cryptic"
-    }
+    },
+    {
+      "slug": "TOTPUtils",
+      "id": "TOTPUtils",
+      "name": "TOTPUtils",
+      "description": "Some utils for TOTP OTP.",
+      "image": "strings.svg",
+      "by": [
+        {
+          "name": "kokofixcomputers",
+          "link": "https://github.com/kokofixcomputers.png"
+        }
+      ],
+      "featured": true,
+      "filename": "TOTPUtils"
+    },
   ]
 }
