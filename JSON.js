@@ -317,6 +317,107 @@
           },
 
           "---",
+          makeLabel("JSON Math"),
+          {
+            opcode: "rangeArray",
+            blockType: Scratch.BlockType.ARRAY,
+            text: "range from [START] to [END]",
+            arguments: {
+              START: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: 1
+              },
+              END: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: 10
+              }
+            }
+          },
+          {
+            opcode: "rangeArrayStep",
+            blockType: Scratch.BlockType.ARRAY,
+            text: "range from [START] to [END] by [STEP]",
+            arguments: {
+              START: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: 0
+              },
+              END: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: 10
+              },
+              STEP: {
+                type: Scratch.ArgumentType.NUMBER,
+                defaultValue: 1
+              }
+            }
+          },
+          {
+            opcode: "sumArray",
+            blockType: Scratch.BlockType.REPORTER,
+            text: "sum of [ARR]",
+            arguments: {
+              ARR: {
+                type: Scratch.ArgumentType.ARRAY
+              }
+            }
+          },
+          {
+            opcode: "averageArray",
+            blockType: Scratch.BlockType.REPORTER,
+            text: "average of [ARR]",
+            arguments: {
+              ARR: {
+                type: Scratch.ArgumentType.ARRAY
+              }
+            }
+          },
+          {
+            opcode: "minArray",
+            blockType: Scratch.BlockType.REPORTER,
+            text: "minimum of [ARR]",
+            arguments: {
+              ARR: {
+                type: Scratch.ArgumentType.ARRAY
+              }
+            }
+          },
+          {
+            opcode: "maxArray",
+            blockType: Scratch.BlockType.REPORTER,
+            text: "maximum of [ARR]",
+            arguments: {
+              ARR: {
+                type: Scratch.ArgumentType.ARRAY
+              }
+            }
+          },
+          {
+            opcode: "sortArrayNumeric",
+            blockType: Scratch.BlockType.ARRAY,
+            text: "sort [ARR] numerically [ORDER]",
+            arguments: {
+              ARR: {
+                type: Scratch.ArgumentType.ARRAY
+              },
+              ORDER: {
+                type: Scratch.ArgumentType.STRING,
+                menu: "sort_order"
+              }
+            }
+          },
+          {
+            opcode: "filterNumericArray",
+            blockType: Scratch.BlockType.ARRAY,
+            text: "numbers in [ARR]",
+            arguments: {
+              ARR: {
+                type: Scratch.ArgumentType.ARRAY
+              }
+            }
+          },
+
+          "---",
           makeLabel("JSON Text"),
           {
             opcode: "parseJson",
@@ -506,6 +607,13 @@
           get_list: {
             acceptReporters: true,
             items: "getLists"
+          },
+          sort_order: {
+            acceptReporters: true,
+            items: [
+              { text: "ascending", value: "asc" },
+              { text: "descending", value: "desc" }
+            ]
           }
         }
       };
@@ -598,6 +706,18 @@
         }
       }
       return value ?? "";
+    }
+
+    _toFiniteNumber(value) {
+      value = Scratch.Cast.toNumber(value);
+      return Number.isFinite(value) ? value : null;
+    }
+
+    _numericArray(arr) {
+      arr = this._normalizeArray(arr);
+      return arr
+        .map(value => this._toFiniteNumber(value))
+        .filter(value => value !== null);
     }
 
     newObject() {
@@ -731,6 +851,89 @@
       A = this._normalizeArray(A);
       B = this._normalizeArray(B);
       return A.concat(B);
+    }
+
+    rangeArray({ START, END }) {
+      START = Scratch.Cast.toNumber(START);
+      END = Scratch.Cast.toNumber(END);
+
+      if (!Number.isFinite(START) || !Number.isFinite(END)) return [];
+
+      START = Math.trunc(START);
+      END = Math.trunc(END);
+
+      const result = [];
+      const step = START <= END ? 1 : -1;
+
+      for (let i = START; step > 0 ? i <= END : i >= END; i += step) {
+        result.push(i);
+      }
+
+      return result;
+    }
+
+    rangeArrayStep({ START, END, STEP }) {
+      START = Scratch.Cast.toNumber(START);
+      END = Scratch.Cast.toNumber(END);
+      STEP = Scratch.Cast.toNumber(STEP);
+
+      if (!Number.isFinite(START) || !Number.isFinite(END) || !Number.isFinite(STEP)) {
+        return [];
+      }
+
+      START = Math.trunc(START);
+      END = Math.trunc(END);
+      STEP = Math.trunc(STEP);
+
+      if (STEP === 0) return [];
+
+      const result = [];
+
+      if (STEP > 0) {
+        for (let i = START; i <= END; i += STEP) {
+          result.push(i);
+        }
+      } else {
+        for (let i = START; i >= END; i += STEP) {
+          result.push(i);
+        }
+      }
+
+      return result;
+    }
+
+    sumArray({ ARR }) {
+      const nums = this._numericArray(ARR);
+      return nums.reduce((sum, n) => sum + n, 0);
+    }
+
+    averageArray({ ARR }) {
+      const nums = this._numericArray(ARR);
+      if (nums.length === 0) return 0;
+      return nums.reduce((sum, n) => sum + n, 0) / nums.length;
+    }
+
+    minArray({ ARR }) {
+      const nums = this._numericArray(ARR);
+      if (nums.length === 0) return "";
+      return Math.min(...nums);
+    }
+
+    maxArray({ ARR }) {
+      const nums = this._numericArray(ARR);
+      if (nums.length === 0) return "";
+      return Math.max(...nums);
+    }
+
+    sortArrayNumeric({ ARR, ORDER }) {
+      const nums = this._numericArray(ARR).slice();
+      nums.sort((a, b) => a - b);
+      if (String(ORDER) === "desc") nums.reverse();
+      return nums;
+    }
+
+    filterNumericArray({ ARR }) {
+      return this._numericArray(ARR);
     }
 
     parseJson({ TEXT }) {
